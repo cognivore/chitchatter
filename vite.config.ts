@@ -81,9 +81,10 @@ const config = () => {
       globals: true,
       environment: 'jsdom',
       setupFiles: './src/setupTests.ts',
+      exclude: ['node_modules/**/*', '.direnv/**/*'],
       coverage: {
         reporter: ['text', 'html'],
-        exclude: ['node_modules/', 'src/setupTests.ts'],
+        exclude: ['node_modules/', 'src/setupTests.ts', '.direnv/'],
       },
     },
   })
